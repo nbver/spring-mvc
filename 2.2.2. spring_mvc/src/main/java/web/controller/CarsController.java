@@ -14,8 +14,6 @@ import java.util.List;
 
 public class CarsController {
 
-
-
     @GetMapping(value = "cars")
     public String printAllCars(ModelMap model,
                                @RequestParam(name = "count", required = false, defaultValue = "5") int count) {
@@ -31,9 +29,4 @@ public class CarsController {
         model.addAttribute("cars", cars);
         return "cars";
     }
-
-
-
-
-
 }
